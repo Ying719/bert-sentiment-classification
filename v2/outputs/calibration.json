@@ -1,0 +1,17 @@
+{
+  "temperature": 1.4896,
+  "fitted_on": "validation set",
+  "val_size": 910,
+  "before": {
+    "nll": 0.2696,
+    "ece": 0.0538,
+    "accuracy": 0.9341
+  },
+  "after": {
+    "nll": 0.2093,
+    "ece": 0.0313,
+    "accuracy": 0.9341
+  },
+  "accuracy_unchanged": true,
+  "ece_improvement_pct": 41.82
+}

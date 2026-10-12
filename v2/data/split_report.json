@@ -1,0 +1,45 @@
+{
+  "config": {
+    "seed": 42,
+    "ratios": [
+      0.8,
+      0.1,
+      0.1
+    ],
+    "max_len": 128,
+    "min_len": 4,
+    "source_file": "D:\\pycharm\\AI-prograrm\\项目3：BERT文本情感分类\\large_data.csv"
+  },
+  "cleaning_funnel": {
+    "raw": 10800,
+    "after_dropna": 10800,
+    "after_strip_empty": 10800,
+    "after_min_len": 10800,
+    "after_dedup": 9097,
+    "removed_duplicates": 1703,
+    "after_label_check": 9097,
+    "length": {
+      "mean": 108.5,
+      "p50": 77,
+      "p95": 234,
+      "p99": 515,
+      "max": 1992,
+      "over_max_len_ratio": 0.3123
+    }
+  },
+  "split_sizes": {
+    "train": 7277,
+    "val": 910,
+    "test": 910
+  },
+  "leak_check": {
+    "train_∩_val": 0,
+    "train_∩_val_samples": [],
+    "train_∩_test": 0,
+    "train_∩_test_samples": [],
+    "val_∩_test": 0,
+    "val_∩_test_samples": [],
+    "conflicting_labels": 0,
+    "all_clean": true
+  }
+}

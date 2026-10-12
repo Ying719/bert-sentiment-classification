@@ -1,0 +1,25 @@
+{
+  "model_name": "bert-base-chinese",
+  "device": "cuda",
+  "fp16": true,
+  "seed": 42,
+  "epochs_configured": 5,
+  "epochs_actually_run": 5,
+  "batch_size": 32,
+  "learning_rate": 2e-05,
+  "max_len": 128,
+  "train_size": 7277,
+  "val_size": 910,
+  "total_params_M": 102.27,
+  "train_runtime_sec": 249.9,
+  "final_val_metrics": {
+    "loss": 0.2696,
+    "accuracy": 0.9341,
+    "macro_f1": 0.9339,
+    "neg_recall": 0.948,
+    "neg_precision": 0.9134,
+    "runtime": 2.0816,
+    "samples_per_second": 437.165,
+    "steps_per_second": 3.843
+  }
+}

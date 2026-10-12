@@ -1,0 +1,39 @@
+# ============================================================
+# .gitignore —— 哪些文件不要提交到 Git
+#
+# 这些文件要么体积巨大（推不上去）、要么是我本机的私人文件
+# （推上去对别人没用，还会暴露本地路径）。
+# ============================================================
+
+# ---- 虚拟环境：5.5 GB，绝对不能推 ----
+bert_env/
+
+# ---- Python 编译缓存 ----
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+
+# ---- PyCharm 私人配置（含本地路径，不要外传）----
+.idea/
+.vscode/
+
+# ---- 训练中间产物：每个 checkpoint 含 781MB 优化器状态，共约 2.3 GB ----
+v2/outputs/checkpoints/
+
+# ---- 模型权重：391 MB，超过 GitHub 单文件 100MB 硬限制 ----
+# 别人克隆后跑一次 train.py 就能得到自己的模型，不需要把它塞进仓库
+v2/outputs/model/
+V1/model/
+
+# ---- 旧版云穿透工具：54 MB 的可执行文件，与代码无关 ----
+V1/deploy/cloudflared.exe
+
+# ---- 单条推理明细：3.5 MB 的逐条 CSV，属于可再生成的产物 ----
+V1/results/evaluation_results.csv
+v2/outputs/test_predictions.csv
+
+# ---- 系统生成文件 ----
+Thumbs.db
+desktop.ini
+.DS_Store
